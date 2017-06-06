@@ -1,0 +1,16 @@
+<% provide(:title, @user.name) %>
+
+<p> <%= @user.name %> </p>
+<p> BOILER PLATE </p>
+
+<div>
+  	<%= form_tag(action: "signin") do %>
+  		<%= label_tag(:name, "Name:") %>
+  		<%= text_field_tag(:name) %>
+  		<%= submit_tag("Sign In") %>
+  	<% end %>
+  </div>
+
+<% if cookies[:signedInUserName] != nil%>
+	<p> Current Signed In User: <%= cookies[:signedInUserName] %> </p>
+<% end %>
