@@ -1,0 +1,21 @@
+<h3> Event Index </h3>
+<% @events.each do |current_event| %>
+		<p> <%= current_event.name %> </p>
+		<p> <%= current_event.date %> </p>
+<% end %>
+
+<h3> Previous Events </h3>
+<% if @previous != nil %>
+  <% @previous.each do |current_event| %>
+      <p> <%= current_event.name %> </p>
+      <p> <%= current_event.date %> </p>
+  <% end %>
+<% end %>
+
+<h3> Upcoming Events </h3>
+<% if @upcoming != nil %>
+  <% @upcoming.each do |current_event| %>
+      <p> <%= current_event.name %> </p>
+      <p> <%= current_event.date %> </p>
+  <% end %>
+<% end %>

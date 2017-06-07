@@ -1,0 +1,12 @@
+<% provide(:title, 'Create an Event') %>
+<% provide(:button_text, 'Create your Event') %>
+<%= form_for(@event) do |f| %> 	
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :date %>
+  <%= f.datetime_select :date %>
+
+  <%= f.submit yield(:button_text) %>
+<% end %>

@@ -1,6 +1,40 @@
 <% provide(:title, @user.name) %>
 
+<h3> Created Events </h3>
 <p> <%= @user.name %> </p>
+<% if @user.created_events != nil %>
+	<% @user.created_events.each do |current_event| %>
+			<p> <%= current_event.name %> </p>
+			<p> <%= current_event.date %> </p>
+	<% end %>
+
+<% end %>
+
+<h3> Attended Events </h3>
+<% if @user.attended_events != nil %>
+  <% @user.attended_events.each do |current_event| %>
+      <p> <%= current_event.name %> </p>
+      <p> <%= current_event.date %> </p>
+  <% end %>
+
+<% end %>
+
+<h3> Previous Events </h3>
+<% if @previous != nil %>
+  <% @previous.each do |current_event| %>
+      <p> <%= current_event.name %> </p>
+      <p> <%= current_event.date %> </p>
+  <% end %>
+<% end %>
+
+<h3> Upcoming Events </h3>
+<% if @upcoming != nil %>
+  <% @upcoming.each do |current_event| %>
+      <p> <%= current_event.name %> </p>
+      <p> <%= current_event.date %> </p>
+  <% end %>
+<% end %>
+
 <p> BOILER PLATE </p>
 
 <div>
